@@ -1,0 +1,22 @@
+Time service: 
+
+1 endpoint:
+- stream the current time as websocket to front endpoint
+- FE -> api gateway -> time service
+      ws            grpc 
+
+Time Service: 
+- runs a ticker that on update, publishes to the connected websockets
+- endpoint to establish a ws connection
+- on tick, push time to ws
+- show  time on FE
+
+Timer Service: 
+- ws creation initilize a Timer
+- every tick, push remaining time to ws
+- show timer on FE
+
+Gateway Service:
+- initilize websockets
+- connect to related grpc stream endpoint
+- push grpc data through to websocket
