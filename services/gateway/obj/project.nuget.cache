@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "D+8wCLISbxMPGXQNttDXJ+jgWlsd1AIgB7DJQLLpTcRJEHs34UTi7IX+bBKQzDM+c58plZz7Kh9hFkT4/qRgjA==",
+  "success": true,
+  "projectFilePath": "/home/zach/simple-microservices/services/gateway/gateway.csproj",
+  "expectedPackageFiles": [
+    "/home/zach/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/zach/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/zach/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/home/zach/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/home/zach/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/home/zach/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
