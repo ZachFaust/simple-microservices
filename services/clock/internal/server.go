@@ -1,6 +1,7 @@
 package internal
 
 import (
+	"log"
 	pb "simple-microservices/lib/proto/clock"
 	"time"
 
@@ -16,6 +17,7 @@ func newServer() *server {
 }
 
 func (s server) CurrentTime(req *pb.CurrentTimeRequest, srv pb.ClockService_CurrentTimeServer) error {
+	log.Println("Current Time Stream Started")
 	t := time.NewTicker(time.Second * 1)
 	defer t.Stop()
 	for {
@@ -25,6 +27,7 @@ func (s server) CurrentTime(req *pb.CurrentTimeRequest, srv pb.ClockService_Curr
 				return err
 			}
 		case <-srv.Context().Done():
+			log.Println("Current Time Stream Done")
 			return nil
 		}
 	}

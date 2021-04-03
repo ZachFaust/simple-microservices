@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"io"
-	"log"
 
 	pb "simple-microservices/lib/proto/clock"
 
@@ -31,9 +30,9 @@ func main() {
 			break
 		}
 		if err != nil {
-			log.Fatalf("%v.CurrentTime(_) = _, %v", client, err)
+			fmt.Printf("%v.CurrentTime(_) = _, %v", client, err)
 		}
-		log.Println(time.GetTime().AsTime().String())
+		fmt.Println(time.GetTime().AsTime().String())
 	}
 
 }
