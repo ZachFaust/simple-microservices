@@ -1,8 +1,8 @@
 package main
 
 import (
+	"api/services/clock/internal"
 	"fmt"
-	"simple-microservices/services/clock/internal"
 )
 
 func main() {
