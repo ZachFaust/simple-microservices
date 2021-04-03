@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	pb "simple-microservices/lib/proto/clock"
+	pb "api/lib/proto/clock"
 
 	"google.golang.org/grpc"
 )

@@ -1,8 +1,8 @@
 package internal
 
 import (
+	pb "api/lib/proto/clock"
 	"log"
-	pb "simple-microservices/lib/proto/clock"
 	"time"
 
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
