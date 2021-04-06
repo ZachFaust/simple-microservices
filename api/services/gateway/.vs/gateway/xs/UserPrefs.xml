@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{94CB0179-FFC1-4D0C-8AF9-F3B0F472B9C9}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hubs/ClockStream.cs">
+    <Files>
+      <File FileName="Hubs/ClockStream.cs" Line="17" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="gateway" expanded="True">
+            <Node name="gateway" expanded="True">
+              <Node name="Hubs" expanded="True">
+                <Node name="ClockStream.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.gateway PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
