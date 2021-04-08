@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using gateway.Hubs;
 
 namespace gateway
 {
@@ -32,6 +33,20 @@ namespace gateway
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "gateway", Version = "v1" });
             });
+            services.AddSignalR(options => {
+                options.EnableDetailedErrors = true; 
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("ClientPermission", policy =>
+                {
+                    policy.AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .WithOrigins("http://localhost:3000")
+                        .AllowCredentials();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,8 +59,9 @@ namespace gateway
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "gateway v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
+            app.UseCors("ClientPermission");
             app.UseRouting();
 
             app.UseAuthorization();
@@ -53,6 +69,7 @@ namespace gateway
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<ClockStreamHub>("/api/clockstream");
             });
         }
     }
