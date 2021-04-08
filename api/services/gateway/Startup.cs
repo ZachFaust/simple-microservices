@@ -33,7 +33,9 @@ namespace gateway
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "gateway", Version = "v1" });
             });
-            services.AddSignalR();
+            services.AddSignalR(options => {
+                options.EnableDetailedErrors = true; 
+            });
 
             services.AddCors(options =>
             {
@@ -57,7 +59,7 @@ namespace gateway
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "gateway v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseCors("ClientPermission");
             app.UseRouting();
