@@ -2,13 +2,22 @@ syntax = "proto3";
 package protoclock;
 
 import "google/protobuf/timestamp.proto";
-//option go_package = "/lib/proto/clock";
+option go_package = "/lib/proto/clock";
 
 service clockService{
     rpc currentTime(currentTimeRequest) returns (stream time){}
+    rpc timer(timerRequest) returns (stream timerResponse) {}
 }
 
 message currentTimeRequest{}
 message time{
     google.protobuf.Timestamp time = 1;
+}
+message timerRequest{
+    int64 length = 1;
+    string message = 2;
+}
+message timerResponse{
+    int64 time_left = 1;
+    int64 message = 2;
 }

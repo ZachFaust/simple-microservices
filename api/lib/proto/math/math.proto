@@ -1,0 +1,22 @@
+syntax = "proto3";
+package protomath;
+
+option go_package = "/lib/proto/math";
+
+service mathService{
+    rpc add(addRequest) returns (addResponse){}
+    rpc divide(divideRequest) returns (divideResponse){}
+}
+
+message addRequest{
+    repeated double numbers = 1;
+}
+message addResponse{
+    double result = 1;
+}
+message divideRequest{
+    repeated double numbers = 1;
+}
+message divideResponse{
+    double result = 1;
+}
