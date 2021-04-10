@@ -6,17 +6,19 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
 
 interface IState {
-    currentTime: string
+    timeRemaining: string
+    message: string
     clockStreamConnection: signalR.HubConnection
     isOpen: boolean
 }
-export class ClockStream extends React.Component{
+export class ClockTimer extends React.Component{
     state: IState;
     clockStreamSub: any;
     constructor(props: any) {
         super(props);
         this.state = {
-            currentTime: '',
+            timeRemaining: '',
+            message: '',
             clockStreamConnection: new signalR.HubConnectionBuilder().withUrl("http://localhost:5000/api/clockstream").build(),
             isOpen: false
         }
@@ -30,8 +32,11 @@ export class ClockStream extends React.Component{
             this.state.clockStreamConnection.start()
                 .then(() => {
                     console.log("SignalR Started");
-                    this.clockStreamSub = this.state.clockStreamConnection.stream("StreamClock").subscribe({
-                        next: (item) => {this.setState({currentTime: item.toString()})},
+                    this.clockStreamSub = this.state.clockStreamConnection.stream("StreamTimer",{
+                        Length: 5,
+                        Message: 'test'
+                    }).subscribe({
+                        next: (item) => {this.setState({timeRemaining: item.timeRemaining.toString(), message: item.message})},
                         complete: () => {console.log("Done")},
                         error: (err) => {console.log(err)}
                     });
@@ -50,11 +55,12 @@ export class ClockStream extends React.Component{
         return (
             <div>
                 <Button variant="outlined" color="primary" onClick={this.handleClickOpen}>
-                  Open ClockStream dialog
+                  Open ClockTimer dialog
                 </Button>
                 <Dialog open={this.state.isOpen} onClose={this.handleClose}>
-                    <DialogTitle>Clock Stream: Websocket -&gt; GRPC</DialogTitle>
-                    <p>Current Time: <Moment unix>{this.state.currentTime}</Moment></p>
+                    <DialogTitle>Clock Timer: Websocket -&gt; GRPC</DialogTitle>
+                    <p>Time Remaining: {this.state.timeRemaining}</p>
+                    <p>Message: {this.state.message}</p>
                     <p>This time display receives data from a websocket connection, that receives data from a GRPC stream.</p>
                 </Dialog>
             </div>

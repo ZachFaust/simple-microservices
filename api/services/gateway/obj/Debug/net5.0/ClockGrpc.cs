@@ -44,6 +44,8 @@ namespace Protoclock {
 
     static readonly grpc::Marshaller<global::Protoclock.currentTimeRequest> __Marshaller_protoclock_currentTimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Protoclock.currentTimeRequest.Parser));
     static readonly grpc::Marshaller<global::Protoclock.time> __Marshaller_protoclock_time = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Protoclock.time.Parser));
+    static readonly grpc::Marshaller<global::Protoclock.timerRequest> __Marshaller_protoclock_timerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Protoclock.timerRequest.Parser));
+    static readonly grpc::Marshaller<global::Protoclock.timerResponse> __Marshaller_protoclock_timerResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Protoclock.timerResponse.Parser));
 
     static readonly grpc::Method<global::Protoclock.currentTimeRequest, global::Protoclock.time> __Method_currentTime = new grpc::Method<global::Protoclock.currentTimeRequest, global::Protoclock.time>(
         grpc::MethodType.ServerStreaming,
@@ -51,6 +53,13 @@ namespace Protoclock {
         "currentTime",
         __Marshaller_protoclock_currentTimeRequest,
         __Marshaller_protoclock_time);
+
+    static readonly grpc::Method<global::Protoclock.timerRequest, global::Protoclock.timerResponse> __Method_timer = new grpc::Method<global::Protoclock.timerRequest, global::Protoclock.timerResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "timer",
+        __Marshaller_protoclock_timerRequest,
+        __Marshaller_protoclock_timerResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -63,6 +72,11 @@ namespace Protoclock {
     public abstract partial class clockServiceBase
     {
       public virtual global::System.Threading.Tasks.Task currentTime(global::Protoclock.currentTimeRequest request, grpc::IServerStreamWriter<global::Protoclock.time> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task timer(global::Protoclock.timerRequest request, grpc::IServerStreamWriter<global::Protoclock.timerResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -100,6 +114,14 @@ namespace Protoclock {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_currentTime, null, options, request);
       }
+      public virtual grpc::AsyncServerStreamingCall<global::Protoclock.timerResponse> timer(global::Protoclock.timerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return timer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncServerStreamingCall<global::Protoclock.timerResponse> timer(global::Protoclock.timerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_timer, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override clockServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -112,7 +134,8 @@ namespace Protoclock {
     public static grpc::ServerServiceDefinition BindService(clockServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_currentTime, serviceImpl.currentTime).Build();
+          .AddMethod(__Method_currentTime, serviceImpl.currentTime)
+          .AddMethod(__Method_timer, serviceImpl.timer).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -122,6 +145,7 @@ namespace Protoclock {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, clockServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_currentTime, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Protoclock.currentTimeRequest, global::Protoclock.time>(serviceImpl.currentTime));
+      serviceBinder.AddMethod(__Method_timer, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Protoclock.timerRequest, global::Protoclock.timerResponse>(serviceImpl.timer));
     }
 
   }
