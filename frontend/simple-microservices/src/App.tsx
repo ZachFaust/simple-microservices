@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
-import { ACCount } from './features/ac-countdown/ACCount';
 import { ClockStream } from './features/clock-stream/ClockStream';
+import {ClockTimer} from './features/clock-timer/ClockTimer';
 import './App.css';
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <ClockStream></ClockStream>
+        <ClockTimer></ClockTimer>
         <Counter />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.

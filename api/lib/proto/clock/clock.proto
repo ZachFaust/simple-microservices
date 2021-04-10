@@ -19,5 +19,5 @@ message timerRequest{
 }
 message timerResponse{
     int64 time_left = 1;
-    int64 message = 2;
+    string message = 2;
 }
