@@ -1,5 +1,5 @@
 package internal
 
 const (
-	grpcPort string = "8080"
+	grpcPort string = "8081"
 )
