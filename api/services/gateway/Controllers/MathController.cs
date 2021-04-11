@@ -15,7 +15,7 @@ namespace gateway.Controllers
         public async Task<double> Add(AddRequest req){
             AppContext.SetSwitch(
                 "System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-            var channel = GrpcChannel.ForAddress("http://localhost:8080");
+            var channel = GrpcChannel.ForAddress("http://localhost:8081");
             var client = new Protomath.mathService.mathServiceClient(channel);
             
             var addReq = new Protomath.addRequest();
@@ -29,7 +29,7 @@ namespace gateway.Controllers
         public async Task<double> Divide(DivideRequest req){
             AppContext.SetSwitch(
                 "System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-            var channel = GrpcChannel.ForAddress("http://localhost:8080");
+            var channel = GrpcChannel.ForAddress("http://localhost:8081");
             var client = new Protomath.mathService.mathServiceClient(channel);
 
             var divideReq = new Protomath.divideRequest();
@@ -43,7 +43,7 @@ namespace gateway.Controllers
         public async Task<double> Average(AddRequest req){
             AppContext.SetSwitch(
                 "System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-            var channel = GrpcChannel.ForAddress("http://localhost:8080");
+            var channel = GrpcChannel.ForAddress("http://localhost:8081");
             var client = new Protomath.mathService.mathServiceClient(channel);
 
 

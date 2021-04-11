@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Threading;
 using Grpc.Net.Client;
 using Protoclock;
-using System.Threading;
 using System.Runtime.CompilerServices;
 using gateway.Hubs.Clients;
 using gateway.Models;
