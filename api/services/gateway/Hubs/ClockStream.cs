@@ -44,7 +44,7 @@ namespace gateway.Hubs
 
                 using var call = client.timer(timerReq);
                 while (await call.ResponseStream.MoveNext(cancellationToken)) {
-                    Console.WriteLine("Timer Time Remaining: ", + call.ResponseStream.Current.TimeLeft);
+                    Console.WriteLine("Timer Time Remaining: " + call.ResponseStream.Current.TimeLeft);
                     var response = new TimerResponse();
                     response.TimeRemaining = call.ResponseStream.Current.TimeLeft;
                     response.Message = call.ResponseStream.Current.Message;

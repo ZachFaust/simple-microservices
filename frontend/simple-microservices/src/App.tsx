@@ -1,60 +1,40 @@
 import React from 'react';
+import {Card, Paper} from '@material-ui/core';
 import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import { ClockStream } from './features/clock-stream/ClockStream';
 import {ClockTimer} from './features/clock-timer/ClockTimer';
+import { Header } from './features/header/Header';
+import { AddForm } from './features/add-form/AddForm';
+import { DivideForm } from './features/divide-form/DivideForm';
+import { AverageForm } from './features/average-form/AverageForm';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <ClockStream></ClockStream>
-        <ClockTimer></ClockTimer>
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+        <Header></Header>
+        <body>
+            <img src={logo} className="App-logo" alt="logo" />
+            <div className="ButtonColumn">
+              <Card className="Card" elevation={5}>
+                <ClockStream></ClockStream>
+                <ClockTimer></ClockTimer>
+              </Card>
+            </div><br></br>
+            <div className="ButtonColumn">
+              <Card elevation={5}>
+                <AddForm></AddForm>
+              </Card>
+              <Card elevation={5}>
+                <DivideForm></DivideForm>
+              </Card>
+              <Card elevation={5}>
+                <AverageForm></AverageForm>
+              </Card>
+            </div>
+            <br></br>
+        </body>
     </div>
   );
 }

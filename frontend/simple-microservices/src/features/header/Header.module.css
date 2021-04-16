@@ -1,0 +1,9 @@
+.headerContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.headerText{
+    color: white;
+    margin: 10px;
+}

@@ -1,0 +1,17 @@
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/appsettings.Development.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/appsettings.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/gateway.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/gateway.runtimeconfig.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/gateway.pdb
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/Google.Protobuf.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/Grpc.AspNetCore.Server.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/Grpc.AspNetCore.Server.ClientFactory.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/Grpc.Core.Api.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/Grpc.Net.Client.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/Grpc.Net.ClientFactory.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/Grpc.Net.Common.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/Microsoft.OpenApi.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/Swashbuckle.AspNetCore.Swagger.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/gateway.deps.json

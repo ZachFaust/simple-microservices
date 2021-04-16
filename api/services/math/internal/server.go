@@ -15,9 +15,6 @@ func newServer() *server {
 }
 
 func (s server) Add(context context.Context, req *pb.AddRequest) (*pb.AddResponse, error) {
-	if len(req.Numbers) < 2 {
-		return nil, errors.New("not enough number provided")
-	}
 	result := 0.0
 	for _, val := range req.GetNumbers() {
 		result += val
