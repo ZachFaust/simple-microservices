@@ -1,0 +1,2 @@
+obj/Release/net5.0/Math.cs \
+obj/Release/net5.0/MathGrpc.cs: ../../lib/proto/math/math.proto

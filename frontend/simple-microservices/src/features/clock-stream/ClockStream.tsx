@@ -22,7 +22,7 @@ export class ClockStream extends React.Component{
         }
     }
     componentWillUnmount() {
-        (this.clockStreamSub as signalR.ISubscription<any>).dispose();
+        (this.clockStreamSub as signalR.ISubscription<any>)?.dispose();
         this.state.clockStreamConnection.stop();
     }
     handleClickOpen = () => {
@@ -42,7 +42,7 @@ export class ClockStream extends React.Component{
       handleClose = () => {
           this.setState({isOpen: false});
           this.setState(() => {
-            (this.clockStreamSub as signalR.ISubscription<any>).dispose();
+            (this.clockStreamSub as signalR.ISubscription<any>)?.dispose();
             this.state.clockStreamConnection.stop();
           });
       };

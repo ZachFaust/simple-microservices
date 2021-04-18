@@ -23,7 +23,7 @@ namespace gateway
         }
 
         public IConfiguration Configuration { get; }
-
+        readonly string ClientOrigins = "_ClientOrigins";
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -39,11 +39,12 @@ namespace gateway
 
             services.AddCors(options =>
             {
-                options.AddPolicy("ClientPermission", policy =>
+                options.AddPolicy(ClientOrigins, policy =>
                 {
                     policy.AllowAnyHeader()
                         .AllowAnyMethod()
-                        .WithOrigins("http://localhost:3000")
+                        .AllowAnyOrigin()
+                        //.WithOrigins("http://localhost:3000")
                         .AllowCredentials();
                 });
             });
@@ -61,10 +62,10 @@ namespace gateway
 
             //app.UseHttpsRedirection();
 
-            app.UseCors("ClientPermission");
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors(ClientOrigins);
 
             app.UseEndpoints(endpoints =>
             {

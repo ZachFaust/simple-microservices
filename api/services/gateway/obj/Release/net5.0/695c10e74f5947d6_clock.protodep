@@ -1,0 +1,3 @@
+obj/Release/net5.0/Clock.cs \
+obj/Release/net5.0/ClockGrpc.cs: /Users/zacharyfaust/.nuget/packages/grpc.tools/2.36.4/build/native/include/google/protobuf/timestamp.proto\
+ ../../lib/proto/clock/clock.proto

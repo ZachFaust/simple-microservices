@@ -24,7 +24,7 @@ export class ClockTimer extends React.Component{
         }
     }
     componentWillUnmount() {
-        (this.clockStreamSub as signalR.ISubscription<any>).dispose();
+        (this.clockStreamSub as signalR.ISubscription<any>)?.dispose();
         this.state.clockStreamConnection.stop();
     }
     handleClickOpen = () => {
@@ -38,7 +38,7 @@ export class ClockTimer extends React.Component{
                     }).subscribe({
                         next: (item) => {this.setState({timeRemaining: item.timeRemaining.toString(), message: item.message})},
                         complete: () => {console.log("Done")},
-                        error: (err) => {console.log(err)}
+                        error: (err) => {this.setState({timeRemaining: '', message: 'Error connecting to server'})}
                     });
                 })
                 .catch(err => console.log("Error starting SignalR: " + err));
@@ -47,7 +47,7 @@ export class ClockTimer extends React.Component{
       handleClose = () => {
           this.setState({isOpen: false});
           this.setState(() => {
-            (this.clockStreamSub as signalR.ISubscription<any>).dispose();
+            (this.clockStreamSub as signalR.ISubscription<any>)?.dispose();
             this.state.clockStreamConnection.stop();
           });
       };
