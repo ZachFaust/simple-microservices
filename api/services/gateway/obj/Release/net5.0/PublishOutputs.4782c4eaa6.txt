@@ -1,5 +1,15 @@
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/out/out/web.config
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/out/web.config
 /Users/zacharyfaust/simple-microservices/api/services/gateway/out/appsettings.Development.json
 /Users/zacharyfaust/simple-microservices/api/services/gateway/out/appsettings.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/out/appsettings.Development.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/out/appsettings.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/out/gateway.deps.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/out/gateway.runtimeconfig.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/out/out/appsettings.Development.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/out/out/appsettings.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/out/out/gateway.deps.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/out/out/out/gateway.runtimeconfig.json
 /Users/zacharyfaust/simple-microservices/api/services/gateway/out/gateway.dll
 /Users/zacharyfaust/simple-microservices/api/services/gateway/out/gateway.runtimeconfig.json
 /Users/zacharyfaust/simple-microservices/api/services/gateway/out/gateway.pdb

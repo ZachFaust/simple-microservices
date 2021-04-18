@@ -43,8 +43,8 @@ namespace gateway
                 {
                     policy.AllowAnyHeader()
                         .AllowAnyMethod()
-                        //.AllowAnyOrigin();
-                        .WithOrigins("http://localhost:3000")
+                        .AllowAnyOrigin()
+                        //.WithOrigins("http://localhost:3000")
                         .AllowCredentials();
                 });
             });

@@ -33,3 +33,13 @@
 /Users/zacharyfaust/simple-microservices/api/services/gateway/obj/Release/net5.0/ref/gateway.dll
 /Users/zacharyfaust/simple-microservices/api/services/gateway/obj/Release/net5.0/gateway.pdb
 /Users/zacharyfaust/simple-microservices/api/services/gateway/obj/Release/net5.0/gateway.genruntimeconfig.cache
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Release/net5.0/out/web.config
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Release/net5.0/out/appsettings.Development.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Release/net5.0/out/appsettings.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Release/net5.0/out/gateway.deps.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Release/net5.0/out/gateway.runtimeconfig.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Release/net5.0/out/out/web.config
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Release/net5.0/out/out/appsettings.Development.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Release/net5.0/out/out/appsettings.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Release/net5.0/out/out/gateway.deps.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Release/net5.0/out/out/gateway.runtimeconfig.json

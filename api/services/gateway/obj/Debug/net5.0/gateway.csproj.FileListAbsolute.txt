@@ -67,3 +67,13 @@
 /Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/appsettings.json
 /Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/gateway.deps.json
 /Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/gateway.runtimeconfig.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/out/out/web.config
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/out/web.config
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/out/appsettings.Development.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/out/appsettings.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/out/gateway.deps.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/out/gateway.runtimeconfig.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/out/out/appsettings.Development.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/out/out/appsettings.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/out/out/gateway.deps.json
+/Users/zacharyfaust/simple-microservices/api/services/gateway/bin/Debug/net5.0/out/out/out/gateway.runtimeconfig.json
