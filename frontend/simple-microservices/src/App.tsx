@@ -7,6 +7,7 @@ import { Header } from './features/header/Header';
 import { AddForm } from './features/add-form/AddForm';
 import { DivideForm } from './features/divide-form/DivideForm';
 import { AverageForm } from './features/average-form/AverageForm';
+import { AppIntro} from './features/app-intro/AppIntro';
 
 import './App.css';
 
@@ -15,13 +16,7 @@ function App() {
     <div className="App">
         <Header></Header>
         <body>
-          <div className="Row">
-            <img src={mainImage} className="App-logo" alt="logo" />
-            <Card>
-              <CardHeader>Microservices Simplified</CardHeader>
-              <CardContent> Paragraph</CardContent>
-            </Card>
-          </div>
+            <AppIntro></AppIntro>
             <div className="ButtonColumn">
               <Card className="Card" elevation={5}>
                 <ClockStream></ClockStream>
