@@ -1,0 +1,23 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    margin-top: 5vmin;
+    height: 90vmin;
+    width: 100%;
+}
+.imgcard{
+    max-width: 40%;
+    max-height: 60vmin;
+    margin-left: 20px;
+    margin-right: 10%;
+}
+img{
+    height: auto;
+    width: auto;
+}
+p{
+    margin-top: 10%;
+    width: 25%;
+    text-align: left;
+}
